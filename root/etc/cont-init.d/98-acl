@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+# Determine OS
+if [ -f /usr/bin/apt ]; then # Ubuntu
+  apt-get update
+  apt-get install --no-install-recommends -y acl
+fi
+if [ -f /sbin/apk ]; then # Alpine
+  apk add --no-cache acl
+fi
+
+chown -R root:root /root
