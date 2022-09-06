@@ -1,0 +1,2 @@
+#!/usr/bin/with-contenv bash
+printf "acl" >> /mod-repo-packages-to-install.list
