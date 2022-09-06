@@ -4,7 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 
 env:
   ENDPOINT: "clexanis/lsio-docker-mods-universal-acl"
-  BRANCH: "release"
+  BRANCH: "main"
 
 jobs:
   build:
