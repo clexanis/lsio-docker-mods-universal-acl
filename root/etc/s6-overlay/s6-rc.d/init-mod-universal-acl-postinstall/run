@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+# Create chown function into system wise shell startup folder
+printf '# Part of the LinuxServer.io acl universal mod
+# This function disallow chown of any path containing "/data"
+chown() {
+	if [[ $* = *"/data"* ]]; then
+		printf "Warning: ACL mod activated, chown of /data folder disallowed."
+		exit 1; else
+		"chown $*"; fi
+}' > /etc/profile.d/mods-universal-acl-disable-chown-data.sh
+chmod 644 /etc/profile.d/mods-disable-chown-data.sh
