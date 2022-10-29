@@ -1,5 +1,0 @@
-#!/usr/bin/with-contenv bash
-# shellcheck shell=bash
-# Copy chown function into system wise shell startup folder
-cp /defaults/mods-universal-acl-disable-chown-data.sh /etc/profile.d/mods-universal-acl-disable-chown-data.sh
-chmod 644 /etc/profile.d/mods-disable-chown-data.sh
