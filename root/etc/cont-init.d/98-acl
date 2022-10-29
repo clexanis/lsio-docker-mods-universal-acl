@@ -7,3 +7,7 @@ if [ -f /sbin/apk ]; then # Alpine Linux
   apk add --no-cache acl
 fi
 chown -R root:root /root
+
+# Copy chown function into system wise shell startup folder
+cp /defaults/mods-disable-chown-data.sh /etc/profile.d/mods-disable-chown-data.sh
+chmod 644 /etc/profile.d/mods-disable-chown-data.sh
