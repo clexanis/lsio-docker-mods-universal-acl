@@ -1,4 +1,5 @@
 #!/usr/bin/with-contenv bash
+# shellcheck shell=bash
 # Determine OS
 if [ -f /usr/bin/apt ]; then # Ubuntu
   apt-get install --no-install-recommends -y acl
