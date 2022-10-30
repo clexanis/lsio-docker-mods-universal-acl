@@ -1,1 +1,1 @@
-/etc/s6-overlay/s6-rc.d/init-mod-universal-acl/run
+/etc/s6-overlay/s6-rc.d/init-mod-universal-acl-postinstall/run
