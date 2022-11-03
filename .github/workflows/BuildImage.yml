@@ -31,7 +31,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            clexanis/lsio-docker-mod-generic-acl
+            clexanis/lsio-docker-mods-universal-acl
             ghcr.io/${{ github.repository }}
           tags: |
             type=ref,event=branch
