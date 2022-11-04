@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+CHOWN_PATH=$(which chown)
+mv "${CHOWN_PATH}" "${CHOWN_PATH}-noshim"
+mv /defaults/chown-shim.sh "${CHOWN_PATH}"
+chmod +x "${CHOWN_PATH}"
