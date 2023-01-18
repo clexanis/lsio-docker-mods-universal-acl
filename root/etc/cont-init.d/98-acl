@@ -10,5 +10,7 @@ fi
 chown -R root:root /root
 
 # Copy chown function into system wise shell startup folder
-cp /defaults/mods-disable-chown-data.sh /etc/profile.d/mods-disable-chown-data.sh
-chmod 644 /etc/profile.d/mods-disable-chown-data.sh
+CHOWN_PATH=$(which chown)
+mv "${CHOWN_PATH}" "${CHOWN_PATH}-noshim"
+mv "/defaults/chown-shim.sh" "${CHOWN_PATH}"
+chmod +x "${CHOWN_PATH}"
